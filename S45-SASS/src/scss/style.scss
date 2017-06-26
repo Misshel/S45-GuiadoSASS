@@ -1,0 +1,42 @@
+#container p {
+	font-family: Arial;
+	font-size: 13px;
+}
+
+#container h1 {
+	font-family: Tahoma;
+	font-size: 45px;
+}
+
+#container h2 {
+	font-family: Helvetica;
+	font-size: 35px;
+}
+
+@mixin border($border) {
+	-webkit-border: $border;
+	-moz-border: $border;
+	-ms-border: $border;
+	border: $border;
+}
+
+div {
+	margin: 1rem;
+}
+
+th {
+	@include border(2px solid);
+	padding: 3px;
+	margin: 10px 7px;
+	color: #c51b1b;
+	font-size: 20px;
+	text-align: center;
+	width: 8rem;
+}
+
+td {
+	color: #276288;
+	font-size: 14px;
+	height: 1.5rem;
+	@extend th
+}
